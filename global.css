@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #0d0400;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  background: #180800;
+}
+::-webkit-scrollbar-thumb {
+  background: #3e1a00;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes ringPulse {
+  0%,
+  100% {
+    opacity: 0.18;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.38;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+.btn-copper {
+  background: #c17f3c;
+  color: #0d0400;
+  border: none;
+  padding: 16px 48px;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+.btn-copper:hover {
+  background: #d4a04a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(193, 127, 60, 0.3);
+}
+.btn-ghost {
+  background: none;
+  border: 1px solid #3e1a00;
+  color: #a06830;
+  padding: 16px 32px;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.btn-ghost:hover {
+  border-color: #a06830;
+  color: #f5e6c8;
+}
+.drop-zone {
+  border: 1.5px dashed #3e1a00;
+  border-radius: 2px;
+  padding: 72px 44px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.drop-zone:hover,
+.drop-zone.dragging {
+  border-color: #c17f3c;
+  background: rgba(40, 18, 0, 0.45);
+}
+.overline {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #6b4020;
+}
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+@media (max-width: 620px) {
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+}
